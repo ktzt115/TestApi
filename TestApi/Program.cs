@@ -42,6 +42,11 @@ namespace TestApi
             })
             .WithName("GetWeatherForecast");
 
+            app.MapGet("/test", (HttpContext httpContext) =>
+            {
+                return "Thuzar is testing you! :P ";
+            });
+
             app.Run();
         }
     }
